@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>figtrees - impressions</title>
+<meta name="description" content="figtrees live and in the studio - De Loge, Hotel Pomeroke and Number Nine Studios in Ghent. Photos and video of JJ Vroman.">
+<meta property="og:title" content="figtrees - impressions">
+<link rel="canonical" href="https://figtrees.be/impressions.html">
+<meta property="og:image" content="https://figtrees.be/media/nogrid.jpg">
+<meta property="og:url" content="https://figtrees.be/impressions.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="media/trailer-poster.jpg" fetchpriority="high">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+<meta name="theme-color" content="#0c1209">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<nav id="site-nav" class="solid">
+  <a href="index.html" class="nav-brand">figtrees</a>
+  <ul class="nav-links">
+    <li><a href="index.html#music">Music</a></li>
+    <li><a href="impressions.html" aria-current="page">Impressions</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="impressions">
+    <div class="imp-wrap">
+
+      <div class="imp-intro reveal">
+        <h1 class="imp-title">Impressions</h1>
+        <p class="imp-sub">Stills and moving images, from the stage and from the garden.</p>
+      </div>
+
+      <div class="imp-grid">
+
+        <!-- opener: the trailer, full width -->
+        <figure class="tile reveal ar-16-9" data-kind="video" data-src="media/trailer.mp4">
+          <img src="media/trailer-poster.jpg" alt="Glengarry trailer" loading="eager" decoding="async">
+          <video muted loop playsinline preload="none" aria-label="Glengarry trailer"></video>
+          <span class="vmark"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Video</span>
+          <figcaption class="cap">Glengarry</figcaption>
+        </figure>
+
+        <!-- De Loge -->
+        <div class="imp-row r2">
+          <figure class="tile reveal ar-3-4" data-kind="image" data-src="media/loge-neon-full.jpg">
+            <img src="media/loge-neon.jpg" alt="figtrees live at De Loge" loading="eager" decoding="async">
+            <figcaption class="cap">De Loge</figcaption>
+          </figure>
+          <figure class="tile reveal d1 ar-1-1" data-kind="image" data-src="media/loge-bar-full.jpg">
+            <img src="media/loge-bar.jpg" alt="figtrees live at De Loge" loading="eager" decoding="async">
+            <figcaption class="cap">De Loge</figcaption>
+          </figure>
+        </div>
+
+        <!-- the greenhouse + Nr.9 -->
+        <div class="imp-row r3">
+          <figure class="tile reveal ar-9-16" data-kind="video" data-src="media/greenhouse.mp4">
+            <img src="media/greenhouse-poster.jpg" alt="The greenhouse" loading="lazy" decoding="async">
+            <video muted loop playsinline preload="none" aria-label="The greenhouse"></video>
+            <span class="vmark"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Video</span>
+          </figure>
+          <figure class="tile reveal d1 ar-16-9" data-kind="image" data-src="media/nr9-desk-full.jpg">
+            <img src="media/nr9-desk.jpg" alt="Recording at Number Nine Studios, Ghent" loading="lazy" decoding="async">
+            <figcaption class="cap">Nr.9</figcaption>
+          </figure>
+        </div>
+
+        <!-- two portraits -->
+        <div class="imp-row r4">
+          <figure class="tile reveal ar-2-3" data-kind="image" data-src="media/forest-full.jpg">
+            <img src="media/forest.jpg" alt="JJ Vroman in the woods" loading="lazy" decoding="async">
+            <figcaption class="cap">Nov.17</figcaption>
+          </figure>
+          <figure class="tile reveal d1 ar-3-4" data-kind="image" data-src="media/pomeroke-full.jpg">
+            <img src="media/pomeroke.jpg" alt="Filming at Hotel Pomeroke" loading="lazy" decoding="async">
+            <figcaption class="cap">Hotel Pomeroke</figcaption>
+          </figure>
+        </div>
+
+        <!-- finale, full width -->
+        <figure class="tile reveal ar-3-2" data-kind="image" data-src="media/nogrid-full.jpg">
+          <img src="media/nogrid.jpg" alt="Long exposure, red light" loading="lazy" decoding="async">
+          <figcaption class="cap">nogrid</figcaption>
+        </figure>
+
+      </div>
+
+      <a class="imp-back" href="index.html"><span class="ar">&#8592;</span> Back</a>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span class="footer-text">figtrees - <a href="https://8circus.be">8circus records</a></span>
+  <span class="footer-text">&copy; 2026</span>
+</footer>
+
+<!-- lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged view">
+  <button class="lb-close" id="lb-close" aria-label="Close">&#10005;</button>
+  <div class="lb-stage" id="lb-stage"></div>
+  <p class="lb-cap" id="lb-cap"></p>
+</div>
+
+<script>
+(() => {
+  'use strict';
+  const canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- reveal ---------- */
+  const rio = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); rio.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => rio.observe(el));
+
+  /* ---------- video tiles: bytes only on intent ---------- */
+  const tiles = [...document.querySelectorAll('.tile')];
+  const vidTiles = tiles.filter(t => t.dataset.kind === 'video');
+
+  // the poster stays visible until the video is genuinely rendering frames,
+  // so a slow connection never shows an empty box
+  vidTiles.forEach(t => {
+    const v = t.querySelector('video');
+    v.addEventListener('playing', () => t.classList.add('playing'));
+    v.addEventListener('pause',   () => t.classList.remove('playing'));
+    v.addEventListener('error',   () => t.classList.remove('playing'));
+  });
+
+  function start(tile) {
+    const v = tile.querySelector('video');
+    if (!v.src) v.src = tile.dataset.src;   // first byte request happens here
+    const p = v.play();
+    if (p) p.catch(() => {});               // autoplay refused: poster just stays
+  }
+  function stop(tile) {
+    const v = tile.querySelector('video');
+    if (v.src) v.pause();
+  }
+
+  if (canHover && !calm) {
+    vidTiles.forEach(t => {
+      t.addEventListener('pointerenter', () => start(t));
+      t.addEventListener('pointerleave', () => stop(t));
+    });
+  } else if (!calm) {
+    // touch: play while the tile is properly in view, pause when it leaves
+    const vio = new IntersectionObserver((es) => {
+      es.forEach(e => e.isIntersecting ? start(e.target) : stop(e.target));
+    }, { threshold: 0.55 });
+    vidTiles.forEach(t => vio.observe(t));
+  }
+
+  /* ---------- lightbox ---------- */
+  const lb = document.getElementById('lb');
+  const stage = document.getElementById('lb-stage');
+  const lbCap = document.getElementById('lb-cap');
+  let lastFocus = null;
+
+  function open(tile) {
+    lastFocus = document.activeElement;
+    vidTiles.forEach(stop);
+    stage.innerHTML = '';
+
+    if (tile.dataset.kind === 'video') {
+      const v = document.createElement('video');
+      v.src = tile.dataset.src;
+      v.controls = true; v.autoplay = true; v.loop = true; v.playsInline = true;
+      stage.appendChild(v);
+    } else {
+      const img = document.createElement('img');
+      img.src = tile.dataset.src;                       // full-size, fetched now
+      img.alt = tile.querySelector('img').alt || '';
+      stage.appendChild(img);
+    }
+
+    const cap = tile.querySelector('.cap');
+    lbCap.textContent = cap ? cap.textContent : '';
+    lb.classList.add('open');
+    requestAnimationFrame(() => lb.classList.add('shown'));
+    document.body.style.overflow = 'hidden';
+    document.getElementById('lb-close').focus();
+  }
+
+  function close() {
+    lb.classList.remove('shown');
+    setTimeout(() => {
+      lb.classList.remove('open');
+      stage.innerHTML = '';
+      document.body.style.overflow = '';
+      if (lastFocus) lastFocus.focus();
+    }, 380);
+  }
+
+  tiles.forEach(t => {
+    t.tabIndex = 0;
+    t.setAttribute('role', 'button');
+    t.addEventListener('click', () => open(t));
+    t.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(t); }
+    });
+  });
+
+  document.getElementById('lb-close').addEventListener('click', close);
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && lb.classList.contains('open')) close(); });
+})();
+</script>
+</body>
+</html>
