@@ -147,7 +147,20 @@ nav.scrolled .nav-brand,nav.solid .nav-brand{opacity:1}
 }
 .contact-email:hover{color:var(--text);border-bottom-color:var(--line-strong)}
 
-.foot-socials{display:flex;flex-wrap:wrap;align-items:center;gap:0.3rem 0;padding-top:2rem;border-top:1px solid var(--line)}
+/* press kit download */
+.epk-line{margin-top:1.6rem}
+.contact-epk{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  font-size:0.6rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;
+  color:rgba(228,224,214,0.42);text-decoration:none;
+  padding-bottom:3px;border-bottom:1px solid transparent;
+  transition:color .35s,border-color .35s
+}
+.contact-epk:hover{color:var(--text);border-bottom-color:var(--line)}
+.contact-epk .dl{font-size:0.72rem;opacity:0.55;transition:transform .35s,opacity .35s}
+.contact-epk:hover .dl{transform:translateY(3px);opacity:1}
+
+.foot-socials{display:flex;flex-wrap:wrap;align-items:center;gap:0.3rem 0;padding-top:2rem;margin-top:2.5rem;border-top:1px solid var(--line)}
 .foot-social{
   font-size:0.6rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;
   color:rgba(228,224,214,0.32);text-decoration:none;transition:color .3s;padding:0.2rem 0.85rem 0.2rem 0
